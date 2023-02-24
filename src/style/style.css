@@ -12,14 +12,18 @@ body {
     padding: 0;
     margin: 0;
     min-height: 100vh;
-    overflow: hidden;
+    /*overflow: hidden;*/
     font-family: coco, sans-serif;
+    background-image: url('../images/ice_cream1.jpg'); 
+    background-size: cover;
 }
 
 .container {
-    min-height: 100vh;
+    min-height: 75vh;
     display: flex;
     flex-direction: column;
+    
+    background: no-repeat;
 }
 
 /* header style */
@@ -60,7 +64,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 75vh;
+    min-height: 75vh;
 }
 .para-container {
     display: flex;
@@ -100,7 +104,7 @@ body {
 
 /* Menu page style */
 .menu-container {  
-    min-height: 100vh;
+    min-height: 75vh;
     display: flex;
     flex-direction: column;
 }
@@ -193,15 +197,20 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 75vh;
 }
 .contact {
-    width: 400px;
+    width: 600px;
     height: 500px;
     background-color: #FFE4E4;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
     gap: 15px;
     border-radius: 50px;
     border: 3px #fff129;
+    padding-left: 100px;
+    font-family: sans-serif;
+    font-weight: 600;
 }

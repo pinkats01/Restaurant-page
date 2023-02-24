@@ -6,32 +6,6 @@ function makeMenu () {
     menuContainerContainer.classList.add("menu-container-container");
     const menuContainer = document.createElement("div");
     menuContainer.classList.add("menu");
-    // Header
-    // create header elements
-    const header= document.createElement("div");
-    const logoContainer= document.createElement("div");
-    const nav= document.createElement("ul");
-    const navElement1= document.createElement("li"); 
-    const navElement2= document.createElement("li"); 
-    const navElement3= document.createElement("li");
-    // add nav elements text content
-    navElement1.textContent= 'Home';
-    navElement2.textContent= 'Menu';
-    navElement3.textContent= 'Contact'; 
-    // add classes to header elements
-    header.classList.add('header');
-    logoContainer.classList.add('logo');
-    nav.classList.add('nav');
-    navElement1.setAttribute('id', 'home');
-    navElement2.setAttribute('id', 'menu');
-    navElement3.setAttribute('id', 'contact');
-    // append the header elements to the container
-    nav.appendChild(navElement1);
-    nav.appendChild(navElement2);
-    nav.appendChild(navElement3);
-    header.appendChild(logoContainer);
-    header.appendChild(nav);
-    container.appendChild(header);
     // Menu body
     function createMeal (name, flavors, topping, prices){
         // create one meal elements  
@@ -78,6 +52,7 @@ function makeMenu () {
         mealDescriptionContent.appendChild(toppingsContent);
         mealDescriptionContent.appendChild(flavorContent);
         menuContainer.appendChild(container1);
+
         
     }
     menuContainerContainer.appendChild(menuContainer);
@@ -86,21 +61,7 @@ function makeMenu () {
     createMeal('Strawberry', 'Strawberry', 'berries', '5$');
     createMeal('chocolate', 'chocolate', 'cacao', '5$');
     createMeal('vanilla', 'vanilla', 'syrup', '3$');
-    createMeal('fruits', 'mango', 'fruits', '8$');
-    // Footer
-    // create footer elements
-    const footer= document.createElement("footer");
-    const footerElement= document.createElement("div");
-    // add classes to footer elements
-    footer.classList.add('footer');
-    footerElement.classList.add('contact-us');
-    // add footer text content
-    footerElement.textContent= 'Contact us';
-    // append the footer elements to the container
-    footer.appendChild(footerElement);
-    container.appendChild(footer);
-
-    
+    createMeal('fruits', 'mango', 'fruits', '8$');  
 }
 
 export default makeMenu;
