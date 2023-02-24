@@ -14,15 +14,14 @@ body {
     min-height: 100vh;
     /*overflow: hidden;*/
     font-family: coco, sans-serif;
-    background-image: url('../images/ice_cream1.jpg'); 
-    background-size: cover;
 }
 
 .container {
     min-height: 75vh;
     display: flex;
     flex-direction: column;
-    
+    background-image: url('../images/ice_cream1.jpg'); 
+    background-size: cover;
     background: no-repeat;
 }
 
