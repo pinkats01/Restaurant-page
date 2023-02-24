@@ -1,3 +1,7 @@
+import strawberry from '../images/strawberry.png';
+import chocolate from '../images/chocolate.png';
+import vanilla from '../images/vanilla.png';
+import mango from '../images/mango.png';
 
 function makeMenu () {
     const container = document.getElementById('content');
@@ -7,7 +11,7 @@ function makeMenu () {
     const menuContainer = document.createElement("div");
     menuContainer.classList.add("menu");
     // Menu body
-    function createMeal (name, flavors, topping, prices){
+    function createMeal (name, flavors, topping, prices, meal){
         // create one meal elements  
         const container1= document.createElement("div");
         const containerHeader= document.createElement("div");
@@ -29,6 +33,8 @@ function makeMenu () {
         toppingsContent.textContent = `: ${flavors}`;
         flavorContent.textContent = `: ${topping}`;
         price.textContent = `${prices}`;
+        // add menu images
+        mealImg.src = meal;
         // add classes     
         container1.classList.add("meal-container");
         containerHeader.classList.add("meal-container-header");
@@ -58,10 +64,10 @@ function makeMenu () {
     menuContainerContainer.appendChild(menuContainer);
     container.appendChild(menuContainerContainer);
 
-    createMeal('Strawberry', 'Strawberry', 'berries', '5$');
-    createMeal('chocolate', 'chocolate', 'cacao', '5$');
-    createMeal('vanilla', 'vanilla', 'syrup', '3$');
-    createMeal('fruits', 'mango', 'fruits', '8$');  
+    createMeal('Strawberry', 'Strawberry', 'berries', '5$', strawberry);
+    createMeal('chocolate', 'chocolate', 'cacao', '5$', chocolate);
+    createMeal('vanilla', 'vanilla', 'syrup', '3$', vanilla);
+    createMeal('fruits', 'mango', 'fruits', '8$', mango);  
 }
 
 export default makeMenu;

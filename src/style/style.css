@@ -33,6 +33,20 @@ body {
     padding: 10px 50px 0 10px;
     color: #574142;
 }
+.logo-word {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 70px;
+    font-weight: 700;
+    width: 700px;
+    margin-left: 5%;
+    color: white;
+}
+.logo-word img {
+    width: 80px;
+    height: 80px;
+}
 .logo {
     background-color: white;
     height: 110px;
@@ -181,10 +195,21 @@ body {
     gap: 10px;
 }
 .meal-img {
+    position: relative;
     background-color: var(--main-color);
     border-radius: 50%;
     height: 30px;
     width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.meal-img img {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    height: 40px;
+    width: 40px;
 }
 .meal-description-container {
     display: flex;

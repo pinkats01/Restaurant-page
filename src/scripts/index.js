@@ -5,6 +5,7 @@ import makeContact from "./contact";
 import '../style/style.css';
 import bg from "../images/ice-cream.webp";
 import Logo from '../images/logo-yellow.png';
+import LogoWordImg from '../images/logo-white.png';
 
 const container = document.getElementById('content');
 container.style.backgroundImage = `url(${bg})`;
@@ -14,6 +15,9 @@ container.style.backgroundPosition = '50% 40%';
 // Header
 // create header elements
 const header= document.createElement("div");
+const logoWord = document.createElement("div");
+const logoWordP = document.createElement("p");
+const logoWordImg = document.createElement("img");
 const logoContainer= document.createElement("div");
 const logoContainerContainer= document.createElement("div");
 const nav= document.createElement("ul");
@@ -22,11 +26,14 @@ const menuBtn= document.createElement("li");
 const contactBtn= document.createElement("li");
 const logoImg = document.createElement("img");
 // add nav elements text content
+logoWordP.textContent = 'Ice Food';
 homeBtn.textContent= 'Home';
 menuBtn.textContent= 'Menu';
 contactBtn.textContent= 'Contact'; 
 logoImg.src = Logo;
+logoWordImg.src = LogoWordImg; 
 // add classes to header elements
+logoWord.classList.add("logo-word");
 logoImg.classList.add("logo");
 header.classList.add('header');
 logoContainer.classList.add('logo');
@@ -41,6 +48,9 @@ nav.appendChild(menuBtn);
 nav.appendChild(contactBtn);
 logoContainer.appendChild(logoImg);
 logoContainerContainer.appendChild(logoContainer);
+logoWord.appendChild(logoWordImg);
+logoWord.appendChild(logoWordP);
+header.appendChild(logoWord);
 header.appendChild(logoContainerContainer);
 header.appendChild(nav);
 container.insertAdjacentElement("beforebegin", header);
