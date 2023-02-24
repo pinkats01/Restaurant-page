@@ -3,24 +3,34 @@ import makePage  from "./page-load";
 import makeMenu from "./menu";
 import makeContact from "./contact";
 import '../style/style.css';
-
+import bg from "../images/ice-cream.webp";
+import Logo from '../images/logo-yellow.png';
 
 const container = document.getElementById('content');
+container.style.backgroundImage = `url(${bg})`;
+container.style.backgroundRepeat = 'no-repeat';
+container.style.backgroundSize = 'cover';
+container.style.backgroundPosition = '50% 40%';
 // Header
 // create header elements
 const header= document.createElement("div");
 const logoContainer= document.createElement("div");
+const logoContainerContainer= document.createElement("div");
 const nav= document.createElement("ul");
 const homeBtn= document.createElement("li"); 
 const menuBtn= document.createElement("li"); 
 const contactBtn= document.createElement("li");
+const logoImg = document.createElement("img");
 // add nav elements text content
 homeBtn.textContent= 'Home';
 menuBtn.textContent= 'Menu';
 contactBtn.textContent= 'Contact'; 
+logoImg.src = Logo;
 // add classes to header elements
+logoImg.classList.add("logo");
 header.classList.add('header');
 logoContainer.classList.add('logo');
+logoContainerContainer.classList.add('logo-container');
 nav.classList.add('nav');
 homeBtn.setAttribute('id', 'home');
 menuBtn.setAttribute('id', 'menu');
@@ -29,7 +39,9 @@ contactBtn.setAttribute('id', 'contact');
 nav.appendChild(homeBtn);
 nav.appendChild(menuBtn);
 nav.appendChild(contactBtn);
-header.appendChild(logoContainer);
+logoContainer.appendChild(logoImg);
+logoContainerContainer.appendChild(logoContainer);
+header.appendChild(logoContainerContainer);
 header.appendChild(nav);
 container.insertAdjacentElement("beforebegin", header);
 // Footer

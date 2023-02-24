@@ -1,4 +1,7 @@
 import Phone from '../images/phone.png';
+import Address from '../images/address.png';
+import OpenTimes from '../images/clock.png';
+import MessageUs from '../images/letter.png';
 
 function makeContact () {
     const container = document.getElementById('content');
@@ -24,12 +27,16 @@ function makeContact () {
     phone.textContent = "0555555555";
     messageUs.textContent = "icefood@gmail.com"
     // add imag src's
-   /*  adressImg.setAttribute('src', '');
-    openTimesImg.setAttribute('src', '');*/
+    addressImg.src= Address;
+    openTimesImg.src= OpenTimes;
     phoneImg.src= Phone;
-   // messageUsImg.setAttribute('src', '');
+    messageUsImg.src= MessageUs;
     // add classes
     contactContainer.classList.add("contact");
+    phoneImg.classList.add("contact-icon");
+    openTimesImg.classList.add("contact-icon");
+    addressImg.classList.add("contact-icon");
+    messageUsImg.classList.add("contact-icon");
     // append elements
     addressContainer.appendChild(addressImg);
     addressContainer.appendChild(address);
